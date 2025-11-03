@@ -1,0 +1,45 @@
+<h2>Trip</h2>
+
+<div *ngIf="message" style="color:green">{{message}}</div>
+
+<form (ngSubmit)="createTrip()" #f="ngForm">
+  <input name="tripName" [(ngModel)]="newTrip.tripName" placeholder="Trip name" required />
+  <input name="source" [(ngModel)]="newTrip.source" placeholder="Source" required />
+  <input name="destination" [(ngModel)]="newTrip.destination" placeholder="Destination" required />
+  <input type="datetime-local" name="startTime" [(ngModel)]="newTrip.startTime" />
+  <input type="datetime-local" name="endTime" [(ngModel)]="newTrip.endTime" />
+  <select name="driverId" [(ngModel)]="newTrip.driverId" required>
+    <option [value]="0">--Select Driver--</option>
+    <option *ngFor="let d of driver" [value]="d.id">{{d.name}}</option>
+  </select>
+  <select name="vehicleId" [(ngModel)]="newTrip.vehicleId" required>
+    <option [value]="0">--Select Vehicle--</option>
+    <option *ngFor="let v of vehicle" [value]="v.id">{{v.vehicleNumber}} ({{v.model}})</option>
+  </select>
+  <button type="submit">Create Trip</button>
+</form>
+
+<hr/>
+
+<table border="1">
+  <thead><tr><th>ID</th><th>Name</th><th>Source</th><th>Destination</th><th>Driver</th><th>Vehicle</th><th>Status</th><th>Action</th><th>startTime</th><th>endTime</th></tr></thead>
+  <tbody>
+    <tr *ngFor="let t of trips">
+      <td>{{t.id}}</td>
+      <td>{{t.tripName}}</td>
+      <td>{{t.source}}</td>
+      <td>{{t.destination}}</td>
+      <td>{{t.driver?.name}}</td>
+      <td>{{t.vehicle?.vehicleNumber}}</td>
+      <td>{{t.isCompleted ? 'Completed' : 'Active'}}</td>
+      <td><button 
+  class="btn btn-success btn-sm"
+  (click)="markCompleted(t.id!)"
+  [disabled]="t.isCompleted">
+  Complete
+</button>
+     <td>{{t.startTime}}</td>
+     <td>{{t.endTime}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,28 @@
+<div class="container">
+  <h3 class="mb-3"> Driver</h3>
+
+  <form (ngSubmit)="addDriver()" class="row g-2 mb-3">
+    <div class="col-md-4">
+      <input [(ngModel)]="newDriver.name" name="name" placeholder="Driver Name" class="form-control" />
+    </div>
+    <div class="col-md-4">
+      <input [(ngModel)]="newDriver.licenseNumber" name="licenseNumber" placeholder="License Number" class="form-control" />
+    </div>
+    <div class="col-md-4">
+      <button type="submit" class="btn btn-primary w-100">Add Driver</button>
+    </div>
+  </form>
+
+  <table class="table table-bordered">
+    <thead class="table-dark">
+      <tr><th>ID</th><th>Name</th><th>License</th></tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of driver">
+        <td>{{ d.id }}</td>
+        <td>{{ d.name }}</td>
+        <td>{{ d.licenseNumber }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

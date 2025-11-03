@@ -1,0 +1,109 @@
+/* 🌟 Container Styling */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  font-family: "Poppins", sans-serif;
+}
+
+h3 {
+  text-align: center;
+  color: #1e293b;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+/* ✳️ Form Section */
+form {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+input.form-control {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input.form-control:focus {
+  border-color: #0d9488;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+  outline: none;
+}
+
+button.btn-primary {
+  background-color: #0d9488;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 12px;
+  transition: background-color 0.2s ease;
+}
+
+button.btn-primary:hover {
+  background-color: #0f766e;
+}
+
+/* 📋 Vehicle Lists */
+h5 {
+  color: #1e293b;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+}
+
+ul li:hover {
+  background-color: #f0fdfa;
+  border-color: #0d9488;
+  transform: translateY(-2px);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  input.form-control {
+    font-size: 0.85rem;
+  }
+
+  button.btn-primary {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  ul li {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+}

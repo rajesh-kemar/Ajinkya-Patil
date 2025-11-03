@@ -1,0 +1,28 @@
+<div class="container">
+  <h3 class="mb-4"> Logistics Dashboard</h3>
+
+  <div class="row text-center">
+    <div class="col-md-2"><div class="card p-3"><h5>Total Trips</h5><p>{{ totalTrip }}</p></div></div>
+    <div class="col-md-2"><div class="card p-3"><h5>Active Trips</h5><p>{{ activeTrip }}</p></div></div>
+    <div class="col-md-2"><div class="card p-3"><h5>Completed Trips</h5><p>{{ completedTrip }}</p></div></div>
+    <div class="col-md-2"><div class="card p-3"><h5>Total Vehicles</h5><p>{{ totalVehicle }}</p></div></div>
+    <div class="col-md-2"><div class="card p-3"><h5>Available Vehicles</h5><p>{{ availableVehicle }}</p></div></div>
+    <div class="col-md-2"><div class="card p-3"><h5>Total Drivers</h5><p>{{ totalDriver }}</p></div></div>
+  </div>
+
+  <hr />
+
+  <ul>
+    <li *ngFor="let t of activeTripList">
+      {{ t.tripName }} — {{ t.driver?.name }} ({{ t.vehicle?.vehicleNumber }})
+    </li>
+  </ul>
+
+  <h5 class="1"> Trips Longer than 8 Hours</h5>
+  <ul>
+    <li *ngFor="let t of longTrip">
+      {{ t.tripName }} ({{ t.source }} → {{ t.destination }})
+       ({{ t.startTime | date:'short' }} → {{ t.endTime | date:'short' }})
+    </li>
+  </ul>
+</div>
