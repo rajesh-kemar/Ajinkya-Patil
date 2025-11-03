@@ -1,0 +1,1101 @@
+{
+	"info": {
+		"_postman_id": "9e317b03-aeac-4e28-85d2-a22b7da528c1",
+		"name": "NewVC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36539933"
+	},
+	"item": [
+		{
+			"name": "CDO",
+			"item": [
+				{
+					"name": "registerCDO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"createdBy\": \"string\",\r\n    \"createdDate\": \"2025-09-30T06:43:24.063Z\",\r\n    \"modifiedBy\": \"string\",\r\n    \"modifiedDate\": \"2025-09-30T06:43:24.063Z\",\r\n    \"cdoMasterId\": 0,\r\n    \"mdoDetailId\": 0,\r\n    \"materialCode\": \"string\",\r\n    \"quantity\": 0,\r\n    \"allocatedQuantity\": 0,\r\n    \"pendingAllocatedQuantity\": 0,\r\n    \"actualPickupDate\": \"2025-09-30T06:43:24.063Z\",\r\n    \"actualDropDate\": \"2025-09-30T06:43:24.063Z\",\r\n    \"status\": \"string\",\r\n    \"isActive\": true,\r\n    \"locationName\": \"string\",\r\n    \"locationCode\": \"string\",\r\n    \"transactionCoolingTime\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/CDO/registerCDO",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"CDO",
+								"registerCDO"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSingleCDODetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/CDO/getSingleCDODetails",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"CDO",
+								"getSingleCDODetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterCDODetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cdoId\": 0,\r\n    \"mdoDetailId\": 0,\r\n    \"materialCode\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/CDO/filterCDODetails",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"CDO",
+								"filterCDODetails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MDODetail",
+			"item": [
+				{
+					"name": "registerMDODetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"createdBy\": \"string\",\r\n    \"createdDate\": \"2025-09-30T06:54:03.729Z\",\r\n    \"modifiedBy\": \"string\",\r\n    \"modifiedDate\": \"2025-09-30T06:54:03.729Z\",\r\n    \"mdoDetailId\": 0,\r\n    \"mdoMasterId\": 0,\r\n    \"materialCode\": \"string\",\r\n    \"quantity\": 2147483647,\r\n    \"status\": \"string\",\r\n    \"isActive\": true,\r\n    \"allocatedQuantity\": 0,\r\n    \"pendingQuantity\": 0,\r\n    \"lineItemNumber\": 0,\r\n    \"unitCost\": 0,\r\n    \"discountAmount\": 0,\r\n    \"discountPercentage\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/MDODetail/registerMDODetails",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"MDODetail",
+								"registerMDODetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSingleMDODetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/MDODetail/getSingleMDODetails",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"MDODetail",
+								"getSingleMDODetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterMDODetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mdoDetailId\": 0,\r\n    \"mdoMasterId\": 0,\r\n    \"lineItemNumber\": 0,\r\n    \"materialCode\": \"string\",\r\n    \"status\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/MDODetail/filterMDODetails",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"MDODetail",
+								"filterMDODetails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MDOMaster",
+			"item": [
+				{
+					"name": "registerMDOMaster",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"createdBy\": \"string\",\r\n    \"createdDate\": \"2025-09-30T07:00:56.261Z\",\r\n    \"modifiedBy\": \"string\",\r\n    \"modifiedDate\": \"2025-09-30T07:00:56.261Z\",\r\n    \"mdoMasterId\": 0,\r\n    \"orderType\": \"string\",\r\n    \"mdoNumber\": 0,\r\n    \"mdoDate\": \"2025-09-30T07:00:56.261Z\",\r\n    \"companyCode\": \"string\",\r\n    \"orderValidTillDate\": \"2025-09-30T07:00:56.261Z\",\r\n    \"distributionChannel\": \"string\",\r\n    \"division\": \"string\",\r\n    \"soldToParty\": \"string\",\r\n    \"shipToParty\": \"string\",\r\n    \"shippingLocation\": \"string\",\r\n    \"customerReference\": \"string\",\r\n    \"customerReferenceDate\": \"2025-09-30T07:00:56.261Z\",\r\n    \"requiredDeliveryStartdate\": \"2025-09-30T07:00:56.261Z\",\r\n    \"senderPlant\": \"string\",\r\n    \"taxType\": \"string\",\r\n    \"currency\": \"string\",\r\n    \"aggregateDiscount\": 0,\r\n    \"transactionType\": \"string\",\r\n    \"status\": \"string\",\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/MDOMaster/registerMDOMaster",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"MDOMaster",
+								"registerMDOMaster"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSingleMDOMaster",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mdoMasterId\": 0,\r\n    \"mdoNumber\": 0,\r\n    \"mdoDate\": \"2025-09-30T07:03:43.351Z\",\r\n    \"orderType\": \"string\",\r\n    \"companyCode\": \"string\",\r\n    \"soldToParty\": \"string\",\r\n    \"senderPlant\": \"string\",\r\n    \"status\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/MDOMaster/getSingleMDOMaster",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"MDOMaster",
+								"getSingleMDOMaster"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterMDOMasters",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mdoMasterId\": 0,\r\n    \"mdoNumber\": 0,\r\n    \"mdoDate\": \"2025-09-30T07:05:32.421Z\",\r\n    \"orderType\": \"string\",\r\n    \"companyCode\": \"string\",\r\n    \"soldToParty\": \"string\",\r\n    \"senderPlant\": \"string\",\r\n    \"status\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/MDOMaster/filterMDOMasters",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"MDOMaster",
+								"filterMDOMasters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registerMdoAndDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isActive\": true,\r\n    \"createdBy\": \"string\",\r\n    \"createdDate\": \"2025-09-30T07:06:23.904Z\",\r\n    \"modifiedBy\": \"string\",\r\n    \"modifiedDate\": \"2025-09-30T07:06:23.904Z\",\r\n    \"mdoMasterId\": 0,\r\n    \"mdoNumber\": 0,\r\n    \"mdoDate\": \"2025-09-30T07:06:23.904Z\",\r\n    \"orderType\": \"string\",\r\n    \"orderValidTillDate\": \"2025-09-30T07:06:23.904Z\",\r\n    \"companyCode\": \"string\",\r\n    \"distributionChannel\": \"string\",\r\n    \"division\": \"string\",\r\n    \"soldToParty\": \"string\",\r\n    \"shipToParty\": \"string\",\r\n    \"shippingLocation\": \"string\",\r\n    \"customerReference\": \"string\",\r\n    \"customerReferenceDate\": \"2025-09-30T07:06:23.904Z\",\r\n    \"requiredDeliveryStartdate\": \"2025-09-30T07:06:23.904Z\",\r\n    \"senderPlant\": \"string\",\r\n    \"taxType\": \"string\",\r\n    \"currency\": \"string\",\r\n    \"aggregateDiscount\": 0,\r\n    \"transactionType\": \"string\",\r\n    \"status\": \"string\",\r\n    \"mdoDetails\": [\r\n        {\r\n            \"isActive\": true,\r\n            \"createdBy\": \"string\",\r\n            \"createdDate\": \"2025-09-30T07:06:23.904Z\",\r\n            \"modifiedBy\": \"string\",\r\n            \"modifiedDate\": \"2025-09-30T07:06:23.904Z\",\r\n            \"mdoDetailId\": 0,\r\n            \"mdoMasterId\": 0,\r\n            \"materialCode\": \"string\",\r\n            \"quantity\": 0,\r\n            \"status\": \"string\",\r\n            \"allocatedQuantity\": 0,\r\n            \"pendingQuantity\": 0,\r\n            \"unitCost\": 0,\r\n            \"discountAmount\": 0,\r\n            \"discountPercentage\": 0,\r\n            \"lineItemNumber\": 0\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/MDOMaster/registerMdoAndDetails",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"MDOMaster",
+								"registerMdoAndDetails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MilestonePlan",
+			"item": [
+				{
+					"name": "registerMilestonePlan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isActive\": true,\r\n    \"createdBy\": \"string\",\r\n    \"createdDate\": \"2025-09-30T07:09:02.264Z\",\r\n    \"modifiedBy\": \"string\",\r\n    \"modifiedDate\": \"2025-09-30T07:09:02.264Z\",\r\n    \"milestonePlanId\": 0,\r\n    \"vehicleTransactionId\": 0,\r\n    \"transactionCode\": \"string\",\r\n    \"milestoneCode\": \"string\",\r\n    \"locationCode\": \"string\",\r\n    \"status\": \"string\",\r\n    \"sequence\": 0,\r\n    \"lane\": \"string\",\r\n    \"completionTime\": \"2025-09-30T07:09:02.264Z\",\r\n    \"isOptional\": true,\r\n    \"remark\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/MilestonePlan/registerMilestonePlan",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"MilestonePlan",
+								"registerMilestonePlan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterMilestonePlan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"milestonePlanId\": 0,\r\n    \"vehicleTransactionId\": 0,\r\n    \"transactionCode\": \"string\",\r\n    \"milestoneCode\": \"string\",\r\n    \"locationCode\": \"string\",\r\n    \"status\": \"string\",\r\n    \"sequence\": 0,\r\n    \"lane\": \"string\",\r\n    \"completionTime\": \"2025-09-30T07:12:55.086Z\",\r\n    \"isOptional\": true,\r\n    \"isActive\": true,\r\n    \"remark\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/MilestonePlan/filterMilestonePlan",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"MilestonePlan",
+								"filterMilestonePlan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterSingleMilestonePlan",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"milestonePlanId\": 0,\r\n    \"vehicleTransactionId\": 0,\r\n    \"transactionCode\": \"string\",\r\n    \"milestoneCode\": \"string\",\r\n    \"locationCode\": \"string\",\r\n    \"status\": \"string\",\r\n    \"sequence\": 0,\r\n    \"lane\": \"string\",\r\n    \"completionTime\": \"2025-09-30T07:14:57.157Z\",\r\n    \"isOptional\": true,\r\n    \"isActive\": true,\r\n    \"remark\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/MilestonePlan/filterSingleMilestonePlan",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"MilestonePlan",
+								"filterSingleMilestonePlan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "outbound",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/MilestonePlan/outbound",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"MilestonePlan",
+								"outbound"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PublishRule",
+			"item": [
+				{
+					"name": "registerPublishRule",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isActive\": true,\r\n    \"createdBy\": \"string\",\r\n    \"createdDate\": \"2025-09-30T07:18:31.433Z\",\r\n    \"modifiedBy\": \"string\",\r\n    \"modifiedDate\": \"2025-09-30T07:18:31.433Z\",\r\n    \"cdoMasterId\": 0,\r\n    \"publishRuleId\": 0,\r\n    \"type\": \"string\",\r\n    \"code\": \"string\",\r\n    \"name\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/PublishRule/registerPublishRule",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"PublishRule",
+								"registerPublishRule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSinglePublishRule",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/PublishRule/getSinglePublishRule",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"PublishRule",
+								"getSinglePublishRule"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterPublishRules",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"publishRuleId\": 0,\r\n    \"type\": \"string\",\r\n    \"code\": \"string\",\r\n    \"name\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/PublishRule/filterPublishRules",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"PublishRule",
+								"filterPublishRules"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "STODetail",
+			"item": [
+				{
+					"name": "registerSTODetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isActive\": true,\r\n    \"createdBy\": \"string\",\r\n    \"createdDate\": \"2025-09-30T07:26:19.309Z\",\r\n    \"modifiedBy\": \"string\",\r\n    \"modifiedDate\": \"2025-09-30T07:26:19.309Z\",\r\n    \"stoDetailId\": 0,\r\n    \"stoMasterId\": 0,\r\n    \"lineItemNumber\": 0,\r\n    \"materialCode\": \"string\",\r\n    \"quantity\": 0,\r\n    \"status\": \"string\",\r\n    \"allocatedQuantity\": 0,\r\n    \"pendingQuantity\": 0,\r\n    \"unitCost\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/STODetail/registerSTODetails",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"STODetail",
+								"registerSTODetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSingleSTODetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/STODetail/getSingleSTODetails",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"STODetail",
+								"getSingleSTODetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterSTODetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stoDetailId\": 0,\r\n    \"stoMasterId\": 0,\r\n    \"lineItemNumber\": 0,\r\n    \"materialCode\": \"string\",\r\n    \"status\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/STODetail/filterSTODetails",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"STODetail",
+								"filterSTODetails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VehicleTransaction",
+			"item": [
+				{
+					"name": "registerVehicleTransaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isActive\": true,\r\n    \"createdBy\": \"string\",\r\n    \"createdDate\": \"2025-09-30T07:32:52.527Z\",\r\n    \"modifiedBy\": \"string\",\r\n    \"modifiedDate\": \"2025-09-30T07:32:52.527Z\",\r\n    \"vehicleTransactionId\": 0,\r\n    \"cdoMasterId\": 0,\r\n    \"vrn\": \"string\",\r\n    \"tenantCode\": \"string\",\r\n    \"driverCode\": \"string\",\r\n    \"helperCode\": \"string\",\r\n    \"transporterCode\": \"string\",\r\n    \"transactionCode\": \"string\",\r\n    \"trailerNumber\": 0,\r\n    \"transactionStartTime\": \"2025-09-30T07:32:52.527Z\",\r\n    \"transactionEndTime\": \"2025-09-30T07:32:52.527Z\",\r\n    \"status\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/VehicleTransaction/registerVehicleTransaction",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"VehicleTransaction",
+								"registerVehicleTransaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterVehicleTransaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vehicleTransactionId\": 0,\r\n    \"cdoMasterId\": 0,\r\n    \"tenantCode\": \"string\",\r\n    \"vrn\": \"string\",\r\n    \"driverCode\": \"string\",\r\n    \"transporterCode\": \"string\",\r\n    \"transactionCode\": \"string\",\r\n    \"trailerNumber\": 0,\r\n    \"transactionStartTime\": \"2025-09-30T07:34:38.635Z\",\r\n    \"transactionEndTime\": \"2025-09-30T07:34:38.635Z\",\r\n    \"status\": \"string\",\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/VehicleTransaction/filterVehicleTransaction",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"VehicleTransaction",
+								"filterVehicleTransaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterSingleVehicleTransaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/VehicleTransaction/filterSingleVehicleTransaction",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"VehicleTransaction",
+								"filterSingleVehicleTransaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDriverHelperByActiveVehicle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/VehicleTransaction/getDriverHelperByActiveVehicle",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"VehicleTransaction",
+								"getDriverHelperByActiveVehicle"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "VehicleTransactionCDOMapping",
+			"item": [
+				{
+					"name": "mapVehicleTransactionCDO",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isActive\": true,\r\n    \"createdBy\": \"string\",\r\n    \"createdDate\": \"2025-09-30T07:39:20.672Z\",\r\n    \"modifiedBy\": \"string\",\r\n    \"modifiedDate\": \"2025-09-30T07:39:20.672Z\",\r\n    \"vtcdoMappingId\": 0,\r\n    \"vehicleTransactionId\": 0,\r\n    \"allocatedWeight\": \"string\",\r\n    \"cdoId\": [\r\n        0\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/VehicleTransactionCDOMapping/mapVehicleTransactionCDO",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"VehicleTransactionCDOMapping",
+								"mapVehicleTransactionCDO"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllVehicleTransactionCDOMapping",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/VehicleTransactionCDOMapping/getAllVehicleTransactionCDOMapping",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"VehicleTransactionCDOMapping",
+								"getAllVehicleTransactionCDOMapping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getVehicleTransactionCDOMappingsOnVehicleTransactionId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/VehicleTransactionCDOMapping/getVehicleTransactionCDOMappingsOnVehicleTransactionId",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"VehicleTransactionCDOMapping",
+								"getVehicleTransactionCDOMappingsOnVehicleTransactionId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterVehicleTransactionCDOMapping",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"vtcdoMappingId\": 0,\r\n    \"vehicleTransactionId\": 0,\r\n    \"cdoId\": 0,\r\n    \"allocatedWeight\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/VehicleTransactionCDOMapping/filterVehicleTransactionCDOMapping\n\n",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"VehicleTransactionCDOMapping",
+								"filterVehicleTransactionCDOMapping\n\n"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProductAllocation",
+			"item": [
+				{
+					"name": "addAndUpdateProductAllocation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isActive\": true,\r\n    \"createdBy\": \"string\",\r\n    \"createdDate\": \"2025-09-30T09:14:49.295Z\",\r\n    \"modifiedBy\": \"string\",\r\n    \"modifiedDate\": \"2025-09-30T09:14:49.295Z\",\r\n    \"productAllocationId\": 0,\r\n    \"vehicleTransactionId\": 0,\r\n    \"batchNo\": \"string\",\r\n    \"quantity\": 0,\r\n    \"productCode\": \"string\",\r\n    \"locationCode\": \"string\",\r\n    \"status\": \"string\",\r\n    \"weight\": 0,\r\n    \"isBulk\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/ProductAllocation/addAndUpdateProductAllocation",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"ProductAllocation",
+								"addAndUpdateProductAllocation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterVehicleTransaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productAllocationId\": 0,\r\n    \"vehicleTransactionId\": 0,\r\n    \"batchNo\": \"string\",\r\n    \"quantity\": 0,\r\n    \"productCode\": \"string\",\r\n    \"locationCode\": \"string\",\r\n    \"status\": \"string\",\r\n    \"weight\": 0,\r\n    \"isBulk\": true,\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/ProductAllocation/filterVehicleTransaction",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"ProductAllocation",
+								"filterVehicleTransaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterSingleVehicleTransaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/ProductAllocation/filterSingleVehicleTransaction",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"ProductAllocation",
+								"filterSingleVehicleTransaction"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "STOMaster",
+			"item": [
+				{
+					"name": "registerSTOMaster",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"isActive\": true,\r\n    \"createdBy\": \"string\",\r\n    \"createdDate\": \"2025-09-30T09:23:47.693Z\",\r\n    \"modifiedBy\": \"string\",\r\n    \"modifiedDate\": \"2025-09-30T09:23:47.693Z\",\r\n    \"stoMasterId\": 0,\r\n    \"stoNumber\": 0,\r\n    \"stoDate\": \"2025-09-30T09:23:47.693Z\",\r\n    \"orderType\": \"string\",\r\n    \"purchaseOrganization\": \"string\",\r\n    \"purchaseGroup\": \"string\",\r\n    \"complanyCode\": \"string\",\r\n    \"senderplant\": \"string\",\r\n    \"receivingPlant\": \"string\",\r\n    \"status\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/STOMaster/registerSTOMaster",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"STOMaster",
+								"registerSTOMaster"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSingleSTOMaster",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stoMasterId\": 0,\r\n    \"stoNumber\": 0,\r\n    \"stoDate\": \"string\",\r\n    \"orderType\": \"string\",\r\n    \"purchaseOrganization\": \"string\",\r\n    \"purchaseGroup\": \"string\",\r\n    \"complanyCode\": \"string\",\r\n    \"senderplant\": \"string\",\r\n    \"receivingPlant\": \"string\",\r\n    \"status\": \"string\",\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/STOMaster/getSingleSTOMaster",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"STOMaster",
+								"getSingleSTOMaster"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filterSTOMasters",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stoMasterId\": 0,\r\n    \"stoNumber\": 0,\r\n    \"stoDate\": \"string\",\r\n    \"orderType\": \"string\",\r\n    \"purchaseOrganization\": \"string\",\r\n    \"purchaseGroup\": \"string\",\r\n    \"complanyCode\": \"string\",\r\n    \"senderplant\": \"string\",\r\n    \"receivingPlant\": \"string\",\r\n    \"status\": \"string\",\r\n    \"isActive\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://74.225.160.2/apgw/vc/STOMaster/filterSTOMasters",
+							"protocol": "http",
+							"host": [
+								"74",
+								"225",
+								"160",
+								"2"
+							],
+							"path": [
+								"apgw",
+								"vc",
+								"STOMaster",
+								"filterSTOMasters"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
